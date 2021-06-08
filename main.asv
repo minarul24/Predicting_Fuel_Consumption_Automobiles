@@ -17,7 +17,7 @@ Xh_te = Xh(:,P+1:M);
 y_te = y(P+1:M);
 
 %optimal parameter
-w = (Xh_tr*Xh_tr')\(Xh_tr*y_tr)
+w = (Xh_tr*Xh_tr')\(Xh_tr*y_tr);
 
 % applying the optimized model
 y1 = Xh_tr' * w;
@@ -28,11 +28,4 @@ RMSE_tr = sqrt(sum((y1-y_tr).^2)/P)
 
 % root-mean squared error: testing
 RMSE_te = sqrt(sum((y2-y_te).^2)/T)
-
-% plotting the groud-truth output
-plot(1:T, y_te, 'b',1:T,y2,'r')
-xlabel('Car Index')
-ylabel('Miles Per Gallon')
-
-% end of main
 
