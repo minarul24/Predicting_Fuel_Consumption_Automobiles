@@ -1,3 +1,6 @@
+% Author: Minarul Shawon
+% Date:   May 30, 2021
+
 load('D_mpg')
 
 %codes taken fron the lab manual
